@@ -1,7 +1,6 @@
 CFLAGS=-Wall -g
 
-all:
-	make ex1 ex3 ex4
+all: ex1 ex3 ex4
 ex1:
 	make ex01/ex1
 ex3:
