@@ -8,4 +8,4 @@ ex3:
 ex4:
 	make ex04/ex4
 clean:
-	rm -f ex01/ex1 ex03/ex3
+	rm -f ex01/ex1 ex03/ex3 ex04/ex4
