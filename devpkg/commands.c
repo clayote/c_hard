@@ -1,4 +1,5 @@
 #include <apr_uri.h>
+#include <apr_file_io.h>
 #include <apr_fnmatch.h>
 #include <unistd.h>
 
@@ -104,7 +105,7 @@ int Command_fetch(apr_pool_t *p, const char *url, int fetch_only)
   return 1;
 
 error:
-  return -1
+  return -1;
 }
 
 int Command_build

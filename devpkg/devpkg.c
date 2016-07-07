@@ -2,6 +2,8 @@
 #include <apr_general.h>
 #include <apr_getopt.h>
 #include <apr_strings.h>
+#include <apr_file_io.h>
+#include <apr_pools.h>
 
 #include "dbg.h"
 #include "db.h"
@@ -70,15 +72,6 @@ int main(int argc, const char const *argv[])
   switch(request) {
   case COMMAND_INSTALL:
     check(url, "You must at least give a URL.");
-    Command_install(p, url, config_opts, make_opts, install_opts);
-    break;
-
-  case COMMAND_LIST:
-    DB_list();
-    break;
-
-  case COMMAND_FETCH:
-    check(url != NULL, "You must give a URL.");
     Command_install(p, url, config_opts, make_opts, install_opts);
     break;
 
